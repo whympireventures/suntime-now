@@ -11,8 +11,8 @@ import {
   getMonthlyData,
   formatTime12,
   formatDayLength,
-  getTimezoneOffset,
 } from "@/lib/sunCalculations";
+import { getTimezoneOffset } from "@/lib/cities";
 
 // ISR: revalidate every 24 hours
 export const revalidate = 86400;
