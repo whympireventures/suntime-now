@@ -2,7 +2,8 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { getCitiesByCountry, getAllCountrySlugs, fromSlug } from "@/lib/cities";
-import { getSunTimes, formatTime12, getTimezoneOffset } from "@/lib/sunCalculations";
+import { getSunTimes, formatTime12 } from "@/lib/sunCalculations";
+import { getTimezoneOffset } from "@/lib/cities";
 
 interface Props {
   params: { country: string };
