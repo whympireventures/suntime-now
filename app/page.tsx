@@ -4,7 +4,8 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { searchCities, getPopularCities, type City } from "@/lib/cities";
-import { getSunTimes, formatTime12, formatDayLength, getTimezoneOffset } from "@/lib/sunCalculations";
+import { getSunTimes, formatTime12, formatDayLength } from "@/lib/sunCalculations";
+import { getTimezoneOffset } from "@/lib/cities";
 
 function SunTimesDisplay({ lat, lng, timezone, cityName }: { lat: number; lng: number; timezone: string; cityName: string }) {
   const now = new Date();
