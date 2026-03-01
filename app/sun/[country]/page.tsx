@@ -1,3 +1,5 @@
+"use client";
+
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import type { Metadata } from "next";
@@ -73,9 +75,6 @@ export default function CountryPage({ params }: Props) {
                   cursor: "pointer",
                   transition: "all 0.2s",
                 }}
-                  onMouseEnter={(e) => { const el = e.currentTarget as HTMLElement; el.style.borderColor = "rgba(245,166,35,0.4)"; el.style.background = "rgba(255,255,255,0.08)"; }}
-                  onMouseLeave={(e) => { const el = e.currentTarget as HTMLElement; el.style.borderColor = "rgba(255,255,255,0.1)"; el.style.background = "rgba(255,255,255,0.05)"; }}
-                >
                   <div style={{ fontWeight: 500, color: "white", marginBottom: "2px" }}>{city.name}</div>
                   {city.state && <div style={{ fontSize: "0.75rem", color: "rgba(255,255,255,0.35)", marginBottom: "10px" }}>{city.state}</div>}
                   <div style={{ display: "flex", justifyContent: "space-between", fontSize: "0.85rem", color: "rgba(255,255,255,0.7)" }}>
