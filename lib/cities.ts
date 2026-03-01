@@ -138,7 +138,7 @@ export function getTimezoneOffset(timezone: string, date: Date): number {
 }
 
 export function getAllCountrySlugs(): string[] {
-  return [...new Set(CITIES.map((c) => c.countrySlug))];
+  return Array.from(new Set(CITIES.map((c) => c.countrySlug)));
 }
 
 export function getPopularCities(limit = 12): City[] {
