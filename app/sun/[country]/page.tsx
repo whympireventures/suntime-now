@@ -1,9 +1,8 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import type { Metadata } from "next";
-import { getCitiesByCountry, getAllCountrySlugs, fromSlug } from "@/lib/cities";
+import { getCitiesByCountry, getAllCountrySlugs, fromSlug, getTimezoneOffset } from "@/lib/cities";
 import { getSunTimes, formatTime12 } from "@/lib/sunCalculations";
-import { getTimezoneOffset } from "@/lib/cities";
 
 interface Props {
   params: { country: string };
@@ -45,11 +44,11 @@ export default function CountryPage({ params }: Props) {
           marginBottom: "8px",
           fontWeight: 600
         }}>
-          Sunrise & Sunset Times in{" "}
+          Sunrise &amp; Sunset Times in{" "}
           <span style={{ color: "#f5a623", fontStyle: "italic" }}>{countryName}</span>
         </h1>
         <p style={{ color: "rgba(255,255,255,0.5)", marginBottom: "48px", fontSize: "1.1rem" }}>
-          Today's sun times for {cities.length} cities
+          Today&apos;s sun times for {cities.length} cities
         </p>
 
         <div style={{
